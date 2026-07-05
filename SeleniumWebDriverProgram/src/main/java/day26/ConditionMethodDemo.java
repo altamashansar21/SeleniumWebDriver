@@ -1,7 +1,7 @@
 package day26;
 
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ConditionMethodDemo {
@@ -29,7 +29,33 @@ public class ConditionMethodDemo {
 		System.out.println(as);
 		
 		
-		Thread.sleep(5000);
+		// isSelected ------>
+		WebElement Excellent=	driver.findElement(By.xpath("//*[@id=\"pollanswers-1\"]"));
+		WebElement Good=	driver.findElement(By.xpath("//*[@id=\"pollanswers-2\"]"));
+		
+		System.out.println("Befor Selection......");
+		System.out.println(Excellent.isSelected());   // false
+		System.out.println(Good.isSelected());		//  false
+		
+		
+		System.out.println("After Selection Good");
+		Good.click();
+		
+		System.out.println(Excellent.isSelected());		// false 
+		System.out.println(Good.isSelected());			// True 
+		
+		
+		System.out.println("After Selection Excellent");
+		Excellent.click();
+		
+		System.out.println(Excellent.isSelected());		// false 
+		System.out.println(Good.isSelected());			// True 
+		
+		
+		
+		
+		
+		
 
 	}
 

@@ -34,6 +34,11 @@ public class LocatorDemo {
 	      // tag-name
 	    List <WebElement> img = driver.findElements(By.tagName("img"));
 	    System.out.println(img.size());
+	    
+	    Thread.sleep(3000);
+	    driver.findElement(By.xpath("//div[text()='Sauce Labs Backpack']")).click();
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//button[text()='Add to cart']")).click();
 
 	}
 
