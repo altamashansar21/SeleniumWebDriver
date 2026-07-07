@@ -1,8 +1,7 @@
 package day28;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -26,7 +25,7 @@ public class HandleBrowserWindow {
 		Set <String> WindowIds =driver.getWindowHandles();
 		
 		//Approch1.
-		List <String> windowlist = new ArrayList<> (WindowIds);
+		/*List <String> windowlist = new ArrayList<> (WindowIds);
 		
 		String parent = windowlist.get(0);
 		String child = windowlist.get(1);
@@ -37,7 +36,19 @@ public class HandleBrowserWindow {
 		
 		// Switch to parent window 
 		driver.switchTo().window(parent);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()); */
+		
+		// Approach 2. 
+		
+		for (String WinID : WindowIds) {
+			String titile =driver.switchTo().window(WinID).getTitle();
+			
+			if (titile.equals("OrangeHRM")) {
+				System.out.println(driver.getCurrentUrl());
+			} else {
+				System.out.println(driver.getCurrentUrl());
+			}
+		}
 
 	}
 
