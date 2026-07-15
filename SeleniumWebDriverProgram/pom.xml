@@ -47,6 +47,11 @@
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    	<groupId>MakeMyTripAutomation</groupId>
+    	<artifactId>MakeMyTripAutomation</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>
